@@ -29,7 +29,7 @@ const AddNewBlog = props => {
                                 author: authorBlog,
                                 context: contextBlog
                             };
-                            const response = await fetch("http://157.245.229.180:3003/newpost", {
+                            const response = await fetch("https://thetechblog.me/newpost", {
                                 method: "POST",
                                 headers: { "Content-Type": "application/json" },
                                 body: JSON.stringify(body)

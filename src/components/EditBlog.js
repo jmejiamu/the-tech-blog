@@ -15,7 +15,7 @@ const EditBlog = ({ blog }) => {
                 author: authorBlog,
                 context: contextBlog
             };
-            const response = await fetch(`http://157.245.229.180:3003/updateblog/${blog.id}`, {
+            const response = await fetch(`https://thetechblog.me/updateblog/${blog.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body)

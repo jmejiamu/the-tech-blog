@@ -8,7 +8,7 @@ const ShowAllBlogs = () => {
     // Delete
     const deletePost = async (id) => {
         try {
-            const deleteData = await fetch(`http://157.245.229.180:3003/deleteblog/${id}`, {
+            const deleteData = await fetch(`https://thetechblog.me/deleteblog/${id}`, {
                 method: 'DELETE'
             })
             setBlogData(blogData.filter(blog => blog.id !== id))
@@ -20,7 +20,7 @@ const ShowAllBlogs = () => {
 
     const getAllPost = async () => {
         try {
-            const response = await fetch('http://157.245.229.180:3003/allpost')
+            const response = await fetch('https://thetechblog.me/allpost')
             const jsonData = await response.json()
 
             setBlogData(jsonData);
