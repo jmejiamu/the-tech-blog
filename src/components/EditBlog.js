@@ -1,33 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const EditBlog = ({ blog }) => {
-    console.log(blog);
-    const [titleblog, setTitleBlog] = useState(blog.title);
-    const [authorBlog, setAuthorBlog] = useState(blog.author);
-    const [contextBlog, setContextBlog] = useState(blog.context);
+
+const EditBlog = (props) => {
+
+    const [titleblog, setTitleBlog] = useState(props.blog.title);
+    const [authorBlog, setAuthorBlog] = useState(props.blog.author);
+    const [contextBlog, setContextBlog] = useState(props.blog.context);
 
     // Update Request
     const updateDataBlog = async (e) => {
-        e.preventDefault();
+        //e.preventDefault();
         try {
             const body = {
                 title: titleblog,
                 author: authorBlog,
                 context: contextBlog
             };
-            const response = await fetch(`https://thetechblog.me/updateblog/${blog.id}`, {
+            const response = await fetch(`https://thetechblog.me/updateblog/${props.blog.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body)
             })
 
             window.location = "/all"
-            console.log(response);
+            //history.push("/");
 
         } catch (error) {
             console.log(error.message);
 
         }
+
 
     }
 
@@ -38,11 +40,11 @@ const EditBlog = ({ blog }) => {
                 type="button"
                 className="btn btn-warning "
                 data-toggle="modal"
-                data-target={`#id${blog.id}`}>
+                data-target={`#id${props.blog.id}`}>
                 Edit</button>
 
 
-            <div className="modal" id={`id${blog.id}`}>
+            <div className="modal" id={`id${props.blog.id}`}>
                 <div className="modal-dialog">
                     <div className="modal-content">
 
@@ -89,6 +91,7 @@ const EditBlog = ({ blog }) => {
                 </div>
             </div>
         </div>
+
     )
 }
 
