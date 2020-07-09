@@ -17,8 +17,8 @@ function App() {
                 <NavBar />
                 <Switch>
                     <Route exact path='/' component={Home} />
-                    <Route path='/all' component={ShowAllBlogs} />
-                    <Route path='/add' component={AddNewBlog} />
+                    <Route exact path='/all' component={ShowAllBlogs} />
+                    <Route exact path='/add' component={AddNewBlog} />
                 </Switch>
                 <FooterBar />
             </div>

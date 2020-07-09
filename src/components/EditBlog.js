@@ -22,13 +22,14 @@ const EditBlog = (props) => {
                 body: JSON.stringify(body)
             })
 
-            window.location = "/all"
-            //history.push("/");
+            // window.location = "/all"
 
         } catch (error) {
             console.log(error.message);
 
         }
+        // console.log('>>>>>>>>>', props.history)
+        window.location = "/all"
 
 
     }
@@ -82,7 +83,7 @@ const EditBlog = (props) => {
                                 type="button"
                                 className="btn btn-warning"
                                 data-dismiss="modal"
-                                onClick={e => updateDataBlog(e)}>Edit</button>
+                                onClick={e => updateDataBlog(e.target.value)}>Edit</button>
 
                             <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
