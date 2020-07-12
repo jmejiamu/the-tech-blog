@@ -34,7 +34,7 @@ const AddNewBlog = props => {
                                 headers: { "Content-Type": "application/json" },
                                 body: JSON.stringify(body)
                             });
-                            console.log(response);
+
                         } catch (error) {
                             console.error(error.message);
                         }
@@ -65,10 +65,10 @@ const AddNewBlog = props => {
     };
 
     return (
-        <div>
+        <div className="bg">
             <h1 className="text-center mt-5">Add New Blog</h1>
             <hr />
-            <form className="mt-5" onSubmit={submitData}>
+            <form className="mt-5 bx-con" onSubmit={submitData}>
                 <div className="form-group">
                     <input
                         type="text"
@@ -99,7 +99,7 @@ const AddNewBlog = props => {
                     />
                 </div>
                 {/* <div className="text-center"> */}
-                <button className="btn btn-success mb-5">Add Blog</button>
+                <button className="btn btn-success">Add Blog</button>
                 {/* </div> */}
             </form>
             {alertValidation.show ? (

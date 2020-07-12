@@ -17,7 +17,7 @@ function App() {
                 <NavBar />
                 <Switch>
                     <Route exact path='/' component={Home} />
-                    <Route exact path='/all' component={ShowAllBlogs} />
+                    <Route path='/all' component={ShowAllBlogs} />
                     <Route exact path='/add' component={AddNewBlog} />
                 </Switch>
                 <FooterBar />

@@ -9,7 +9,7 @@ const EditBlog = (props) => {
 
     // Update Request
     const updateDataBlog = async (e) => {
-        //e.preventDefault();
+        // e.preventDefault();
         try {
             const body = {
                 title: titleblog,
@@ -24,11 +24,13 @@ const EditBlog = (props) => {
 
             // window.location = "/all"
 
+
         } catch (error) {
             console.log(error.message);
 
         }
-        // console.log('>>>>>>>>>', props.history)
+        // console.log('>>>>>>>>>', props)
+
         window.location = "/all"
 
 

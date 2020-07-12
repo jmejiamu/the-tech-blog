@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import EditBlog from './EditBlog';
 
-const ShowAllBlogs = () => {
+const ShowAllBlogs = (props) => {
     const [blogData, setBlogData] = useState([]);
 
     // Delete
@@ -33,11 +33,10 @@ const ShowAllBlogs = () => {
         getAllPost();
     }, []);
 
-    console.log(blogData);
 
     return (
-        <div>
-            <h1 className="text-center mt-5" >All Blogs</h1>
+        <div className="bg">
+            <h1 className="text-center py-5" >All Blogs</h1>
 
             <hr />
             {blogData.length === 0 ? <h1 className="text-center mt-5 mb-5"> There is not post yet!{'😌'}</h1> : (blogData.map(blog => {
@@ -48,7 +47,7 @@ const ShowAllBlogs = () => {
                             <h6 className="card-subtitle mb-2 text-muted">{blog.author}</h6>
                             <p className="card-text">{blog.context}</p>
                             <div className=" card-link btn-group">
-                                <EditBlog blog={blog} />
+                                <EditBlog blog={blog} props={props} />
                             </div>
                             <button
                                 type="button"
