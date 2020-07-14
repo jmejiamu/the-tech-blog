@@ -66,9 +66,12 @@ const AddNewBlog = props => {
 
     return (
         <div className="bg">
-            <h1 className="text-center mt-5">Add New Blog</h1>
-            <hr />
-            <form className="mt-5 bx-con" onSubmit={submitData}>
+            <div className="jumbotron jumbotron-fluid">
+                <div className="container">
+                    <h1 className="text-center py-5 cl" >Add New Blog</h1>
+                </div>
+            </div>
+            <form className="mt-5 mb-5 bx-con" onSubmit={submitData}>
                 <div className="form-group">
                     <input
                         type="text"

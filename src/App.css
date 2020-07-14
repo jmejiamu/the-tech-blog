@@ -67,4 +67,17 @@ a:hover{text-decoration:none}
   box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
   padding: 50px;
   border-radius: 7px;
+
+}
+.jumbotron{
+  /* background-color: blueviolet; */
+  background-image: url("https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px 0px 5px 5px ;
+}
+.cl{
+  color: rgb(204, 90, 233);
+  text-shadow:2px 2px 3px black;
+  font-size: 70px;
 }

@@ -36,8 +36,11 @@ const ShowAllBlogs = (props) => {
 
     return (
         <div className="bg">
-            <h1 className="text-center py-5" >All Blogs</h1>
-
+            <div className="jumbotron jumbotron-fluid">
+                <div className="container">
+                    <h1 className="text-center py-5 cl" >Blogs</h1>
+                </div>
+            </div>
             <hr />
             {blogData.length === 0 ? <h1 className="text-center mt-5 mb-5"> There is not post yet!{'😌'}</h1> : (blogData.map(blog => {
                 return (
