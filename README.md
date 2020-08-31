@@ -1,16 +1,14 @@
+NOTE: Website Underconstruction
 [The Tech Blog](https://pedantic-mirzakhani-a289df.netlify.app/).
 
 ## The Tech Blog
 
-Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal of this project was to practice technologies such as  React, NodeJs, Express, Postgresql. Also, practice how to setup SSL certificate. 
+Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal was to practice technologies such as  React, NodeJs, Express, Postgresql. Also, practice how to setup SSL certificate. 
 
 ### `Adding A Blog`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![screencapture-pedantic-mirzakhani-a289df-netlify-app-add-2020-08-30-23_07_40](https://user-images.githubusercontent.com/27458911/91688039-ed855400-eb15-11ea-9906-ab6784fb1969.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 ### `yarn test`
 
