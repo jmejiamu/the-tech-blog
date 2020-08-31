@@ -1,10 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[The Tech Blog](https://pedantic-mirzakhani-a289df.netlify.app/).
 
-## Available Scripts
+## The Tech Blog
 
-In the project directory, you can run:
+Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal of this project was to practice technologies such as  React, NodeJs, Express, Postgresql. Also, practice how to setup SSL certificate. 
 
-### `yarn start`
+### `Adding A Blog`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
