@@ -3,7 +3,7 @@ NOTE: Front-end Underconstruction
 
 ## The Tech Blog
 
-Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal was to practice technologies such as  React,Boostrap, NodeJs, Express, Postgresql. Also, practice how to setup SSL certificate. 
+Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal was to practice technologies such as  React,Bootstrap, NodeJs, Express, Postgresql. Also, practice how to setup SSL certificate. 
 
 ### Add Blogs
 
