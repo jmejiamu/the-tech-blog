@@ -1,29 +1,23 @@
-NOTE: Website Underconstruction
+NOTE: Front-end Underconstruction
 [The Tech Blog](https://pedantic-mirzakhani-a289df.netlify.app/).
 
 ## The Tech Blog
 
 Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal was to practice technologies such as  React, NodeJs, Express, Postgresql. Also, practice how to setup SSL certificate. 
 
-### `Adding A Blog`
+### Add Blogs
 
 ![screencapture-pedantic-mirzakhani-a289df-netlify-app-add-2020-08-30-23_07_40](https://user-images.githubusercontent.com/27458911/91688039-ed855400-eb15-11ea-9906-ab6784fb1969.png)
 
 
-### `yarn test`
+### Show all blogs
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### No blogs
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![screencapture-pedantic-mirzakhani-a289df-netlify-app-all-2020-08-30-23_16_11](https://user-images.githubusercontent.com/27458911/91688515-00e4ef00-eb17-11ea-982c-d1495e72028f.png)
 
 ### `yarn eject`
 
@@ -35,32 +29,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
