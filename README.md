@@ -1,5 +1,5 @@
 NOTE: Front-end Underconstruction
-[The Tech Blog](https://pedantic-mirzakhani-a289df.netlify.app/).
+[The Tech Blog](https://the-tech-blog.netlify.app/).
 
 ## The Tech Blog
 
