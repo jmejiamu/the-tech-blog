@@ -20,3 +20,11 @@ Full stack application that allows users to add, delete, and update post. This i
 
 ## Note:
 Feel free to add, delete or update a post
+
+# What is next?
+* Redesign UI
+* Use Tailwind
+* Redux 
+* Add authentication
+  * Sign In/ Sign Up
+
