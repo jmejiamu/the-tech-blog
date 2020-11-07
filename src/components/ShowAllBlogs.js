@@ -3,23 +3,23 @@ import React, { useEffect, useState } from 'react'
 import EditBlog from './EditBlog';
 import { getData } from './../action/getData';
 import { connect } from 'react-redux';
+import { deletePost } from './../action/deleteData';
 
 const ShowAllBlogs = (props) => {
     const [blogData, setBlogData] = useState([]);
 
-    console.log('PROPS', props);
     // Delete
-    const deletePost = async (id) => {
-        try {
-            const deleteData = await fetch(`https://thetechblog.me/deleteblog/${id}`, {
-                method: 'DELETE'
-            })
-            setBlogData(blogData.filter(blog => blog.id !== id))
-        } catch (error) {
-            console.error(error.message);
+    // const deletePost = async (id) => {
+    //     try {
+    //         const deleteData = await fetch(`https://thetechblog.me/deleteblog/${id}`, {
+    //             method: 'DELETE'
+    //         })
+    //         setBlogData(blogData.filter(blog => blog.id !== id))
+    //     } catch (error) {
+    //         console.error(error.message);
 
-        }
-    }
+    //     }
+    // }
 
     const getAllPost = async () => {
         try {
@@ -58,10 +58,10 @@ const ShowAllBlogs = (props) => {
                                 <div className=" card-link btn-group">
                                     <EditBlog blog={blog} />
                                 </div>
-                                <button
+                                {/* <button
                                     type="button"
                                     className="card-link btn btn btn-danger"
-                                    onClick={() => deletePost(blog.id)}>Delete</button>
+                                    onClick={() => props.dele(blog.id)}>Delete</button> */}
                             </div>
                         </div>
                     )
@@ -78,7 +78,12 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        getData: dispatch(getData())
+        getData: dispatch(getData()),
     }
 }
+// const mapDispatchToProps = {
+
+//     deletePost
+
+// }
 export default connect(mapStateToProps, mapDispatchToProps)(ShowAllBlogs);

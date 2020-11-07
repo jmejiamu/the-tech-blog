@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { deletePost } from './../action/deleteData';
 
 
 const EditBlog = (props) => {
@@ -36,6 +38,11 @@ const EditBlog = (props) => {
 
     }
 
+    const deleteItem = () => {
+        const id = props.blog.id;
+        props.deletePost(id)
+    }
+
     return (
         <div>
 
@@ -46,6 +53,10 @@ const EditBlog = (props) => {
                 data-target={`#id${props.blog.id}`}>
                 Edit</button>
 
+            <button
+                type="button"
+                className="card-link btn btn btn-danger mx-3"
+                onClick={() => deleteItem()}>Delete</button>
 
             <div className="modal" id={`id${props.blog.id}`}>
                 <div className="modal-dialog">
@@ -98,4 +109,6 @@ const EditBlog = (props) => {
     )
 }
 
-export default EditBlog;
+const mapDispatchToProps = { deletePost }
+
+export default connect(null, mapDispatchToProps)(EditBlog);
