@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
 import EditBlog from './EditBlog';
+import { getData } from './../action/getData';
+import { connect } from 'react-redux';
 
 const ShowAllBlogs = (props) => {
     const [blogData, setBlogData] = useState([]);
 
+    console.log('PROPS', props);
     // Delete
     const deletePost = async (id) => {
         try {
@@ -30,7 +33,8 @@ const ShowAllBlogs = (props) => {
         }
     }
     useEffect(() => {
-        getAllPost();
+        // getAllPost();
+        getData();
     }, []);
 
 
@@ -42,28 +46,39 @@ const ShowAllBlogs = (props) => {
                 </div>
             </div>
             <hr />
-            {blogData.length === 0 ? <h1 className="text-center mt-5 mb-5"> There is not post yet!{'😌'}</h1> : (blogData.map(blog => {
-                return (
-                    <div className="card mb-5" key={blog.id} >
-                        <div className="card-body">
-                            <h5 className="card-title">{blog.title}</h5>
-                            <h6 className="card-subtitle mb-2 text-muted">{blog.author}</h6>
-                            <p className="card-text">{blog.context}</p>
-                            <div className=" card-link btn-group">
-                                <EditBlog blog={blog} props={props} />
-                            </div>
-                            <button
-                                type="button"
-                                className="card-link btn btn btn-danger"
-                                onClick={() => deletePost(blog.id)}>Delete</button>
-                        </div>
-                    </div>
-                )
+            {
+                props.show.length === 0 ? <h1 className="text-center mt-5 mb-5"> There is not post yet!{'😌'}</h1> : (props.show.map(blog => {
 
-            })
-            )}
+                    return (
+                        <div className="card mb-5" key={blog.id} >
+                            <div className="card-body">
+                                <h5 className="card-title">{blog.title}</h5>
+                                <h6 className="card-subtitle mb-2 text-muted">{blog.author}</h6>
+                                <p className="card-text">{blog.context}</p>
+                                <div className=" card-link btn-group">
+                                    <EditBlog blog={blog} />
+                                </div>
+                                <button
+                                    type="button"
+                                    className="card-link btn btn btn-danger"
+                                    onClick={() => deletePost(blog.id)}>Delete</button>
+                            </div>
+                        </div>
+                    )
+
+                })
+                )}
         </div>
     )
 }
-
-export default ShowAllBlogs;
+const mapStateToProps = (state) => {
+    return {
+        show: state.showData
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getData: dispatch(getData())
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ShowAllBlogs);
