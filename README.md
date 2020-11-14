@@ -30,6 +30,8 @@ Feel free to add, delete or update a post
 
 ❌ Redux
 
+❌ Pagination
+
 ❌ Add authentication
   * Sign In/ Sign Up
 
