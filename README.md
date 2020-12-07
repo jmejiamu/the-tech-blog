@@ -24,11 +24,13 @@ Feel free to add, delete or update a post
 # What is next?
 ❌ Redesign UI
 
-* [Redesing in proccess..](https://www.figma.com/file/MP7PEL4CfYc5fyK0cN5U4I/Untitled?node-id=0%3A1)
+* [Redesign in proccess..](https://www.figma.com/file/MP7PEL4CfYc5fyK0cN5U4I/Untitled?node-id=0%3A1)
 
 ❌ Use Tailwind
 
 ❌ Redux
+
+❌ Pagination
 
 ❌ Add authentication
   * Sign In/ Sign Up
