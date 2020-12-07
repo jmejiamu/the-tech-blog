@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import { deletePost } from './../action/deleteData';
+// import { connect } from 'react-redux';
+// import { deletePost } from './../action/deleteData';
+// import { updatePost } from './../action/updatePost';
+// import { editOpen } from './../action/editOpen';
+import { toast } from 'react-toastify';
 
 
 const EditBlog = (props) => {
@@ -10,9 +13,10 @@ const EditBlog = (props) => {
     const [contextBlog, setContextBlog] = useState(props.blog.context);
 
     // Update Request
-    const updateDataBlog = async (e) => {
+    const updateDataBlog = async () => {
         // e.preventDefault();
         try {
+            // const id = props.blog.id;
             const body = {
                 title: titleblog,
                 author: authorBlog,
@@ -24,7 +28,12 @@ const EditBlog = (props) => {
                 body: JSON.stringify(body)
             })
 
-            // window.location = "/all"
+            const responseData = await response.json();
+            console.log(responseData);
+            toast.success(responseData.data, { autoClose: 15000 });
+            // props.updatePost(id, body)
+
+            window.location = "/all"
 
 
         } catch (error) {
@@ -33,30 +42,34 @@ const EditBlog = (props) => {
         }
         // console.log('>>>>>>>>>', props)
 
-        window.location = "/all"
+
 
 
     }
 
-    const deleteItem = () => {
-        const id = props.blog.id;
-        props.deletePost(id)
-    }
+    // const editpost = (id) => {
+    //     props.editOpen(id)
+    // }
+
+    // const deleteItem = () => {
+    //     const id = props.blog.id;
+    //     props.deletePost(id)
+    // }
 
     return (
         <div>
 
             <button
                 type="button"
-                className="btn btn-warning "
+                className="button-style btn btn-link "
                 data-toggle="modal"
                 data-target={`#id${props.blog.id}`}>
                 Edit</button>
 
-            <button
+            {/* <button
                 type="button"
                 className="card-link btn btn btn-danger mx-3"
-                onClick={() => deleteItem()}>Delete</button>
+                onClick={() => deleteItem()}>Delete</button> */}
 
             <div className="modal" id={`id${props.blog.id}`}>
                 <div className="modal-dialog">
@@ -93,10 +106,12 @@ const EditBlog = (props) => {
 
                         <div className="modal-footer">
                             <button
-                                type="button"
+                                type="submit"
                                 className="btn btn-warning"
                                 data-dismiss="modal"
-                                onClick={e => updateDataBlog(e.target.value)}>Edit</button>
+                                onClick={() => updateDataBlog()}
+                            // onSubmit={updateDataBlog}
+                            >Edit</button>
 
                             <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
@@ -109,6 +124,6 @@ const EditBlog = (props) => {
     )
 }
 
-const mapDispatchToProps = { deletePost }
+// const mapDispatchToProps = { deletePost, updatePost, editOpen }
 
-export default connect(null, mapDispatchToProps)(EditBlog);
+export default EditBlog;

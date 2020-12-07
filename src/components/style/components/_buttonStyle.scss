@@ -1,0 +1,18 @@
+@mixin onHover {
+    text-decoration: none;
+}
+
+.button-style{
+    color: $btn-color;
+    font-weight: bold;
+}
+.button-style:hover{
+    color: $btn-hover;
+    @include onHover()
+}
+.button-style:visited{
+    @include onHover()
+}
+.button-style:link{
+    @include onHover()
+}

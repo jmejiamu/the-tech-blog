@@ -1,25 +1,28 @@
 import React, { useEffect, useState } from 'react'
+import { toast } from 'react-toastify';
+// import './style/card.scss'
 
 import EditBlog from './EditBlog';
-import { getData } from './../action/getData';
-import { connect } from 'react-redux';
-import { deletePost } from './../action/deleteData';
+// import { getData } from './../action/getData';
+// import { connect } from 'react-redux';
+// import { deletePost } from './../action/deleteData';
 
 const ShowAllBlogs = (props) => {
     const [blogData, setBlogData] = useState([]);
-
     // Delete
-    // const deletePost = async (id) => {
-    //     try {
-    //         const deleteData = await fetch(`https://thetechblog.me/deleteblog/${id}`, {
-    //             method: 'DELETE'
-    //         })
-    //         setBlogData(blogData.filter(blog => blog.id !== id))
-    //     } catch (error) {
-    //         console.error(error.message);
+    const deletePost = async (id) => {
+        try {
+            const deleteData = await fetch(`https://thetechblog.me/deleteblog/${id}`, {
+                method: 'DELETE'
+            })
+            setBlogData(blogData.filter(blog => blog.id !== id))
+            const dataResponse = await deleteData.json();
+            toast.success(dataResponse.data)
+        } catch (error) {
+            console.error(error.message);
 
-    //     }
-    // }
+        }
+    }
 
     const getAllPost = async () => {
         try {
@@ -33,35 +36,38 @@ const ShowAllBlogs = (props) => {
         }
     }
     useEffect(() => {
-        // getAllPost();
-        getData();
+        getAllPost();
+        // getData();
     }, []);
 
 
     return (
-        <div className="bg">
-            <div className="jumbotron jumbotron-fluid">
+        <div className="body">
+            {/* <div className="jumbotron jumbotron-fluid">
                 <div className="container">
                     <h1 className="text-center py-5 cl" >Blogs</h1>
                 </div>
-            </div>
+            </div> */}
             <hr />
             {
-                props.show.length === 0 ? <h1 className="text-center mt-5 mb-5"> There is not post yet!{'😌'}</h1> : (props.show.map(blog => {
+                blogData.length === 0 ? <h1 className="text-center mt-5 mb-5"> There is not post yet!{'😌'}</h1> : (blogData.map(blog => {
 
                     return (
-                        <div className="card mb-5" key={blog.id} >
+                        <div className="card mb-5 container " key={blog.id} >
+                            <div class="img-square-wrapper">
+                                <img className="image-style" src="http://via.placeholder.com/100x100" alt="Carcap" />
+                            </div>
                             <div className="card-body">
                                 <h5 className="card-title">{blog.title}</h5>
                                 <h6 className="card-subtitle mb-2 text-muted">{blog.author}</h6>
                                 <p className="card-text">{blog.context}</p>
                                 <div className=" card-link btn-group">
-                                    <EditBlog blog={blog} />
+                                    <EditBlog blog={blog} key={blog.id} />
                                 </div>
-                                {/* <button
+                                <button
                                     type="button"
-                                    className="card-link btn btn btn-danger"
-                                    onClick={() => props.dele(blog.id)}>Delete</button> */}
+                                    className="button-style card-link btn btn-link"
+                                    onClick={() => deletePost(blog.id)}>Delete</button>
                             </div>
                         </div>
                     )
@@ -71,19 +77,19 @@ const ShowAllBlogs = (props) => {
         </div>
     )
 }
-const mapStateToProps = (state) => {
-    return {
-        show: state.showData
-    }
-}
-const mapDispatchToProps = (dispatch) => {
-    return {
-        getData: dispatch(getData()),
-    }
-}
+// const mapStateToProps = (state) => {
+//     return {
+//         show: state.showData
+//     }
+// }
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         getData: dispatch(getData()),
+//     }
+// }
 // const mapDispatchToProps = {
 
 //     deletePost
 
 // }
-export default connect(mapStateToProps, mapDispatchToProps)(ShowAllBlogs);
+export default ShowAllBlogs;
