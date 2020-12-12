@@ -32,6 +32,6 @@ Feel free to add, delete or update a post
 
 ❌ Pagination
 
-❌ Add authentication
+✔️ Add authentication
   * Sign In/ Sign Up
 
