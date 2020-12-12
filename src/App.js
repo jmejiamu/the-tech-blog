@@ -49,7 +49,6 @@ function App() {
         <BrowserRouter>
             <div className="body" >
                 <Switch>
-                    {/* Log in */}
                     <Route exact={true}
                         path='/'
                         render={props => !isAuthenticated ? <Login {...props} setAuth={setAuth} /> : <Redirect to="/home" />} />
