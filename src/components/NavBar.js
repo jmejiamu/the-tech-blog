@@ -32,9 +32,9 @@ const NavBar = (props) => {
                     <button className="drop-down-style btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {`Welcome ✌️ , ${props.name}`} </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a className="dropdown-item" href="#">Edit Perfil</a>
+                        <a className="dropdown-item" href="#home">Edit Perfil</a>
 
-                        <a className="dropdown-item" href="#"
+                        <a className="dropdown-item" href="#home"
                             onClick={e => logout(e, props)}
                         >Sing Out</a>
                     </div>
