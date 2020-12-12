@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
-// import { withRouter } from 'react-router-dom';
 
 const AddNewBlog = props => {
     const [userName, setUserName] = useState("");

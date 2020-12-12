@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-// import { connect } from 'react-redux';
-// import { deletePost } from './../action/deleteData';
-// import { updatePost } from './../action/updatePost';
-// import { editOpen } from './../action/editOpen';
+
 import { toast } from 'react-toastify';
 
 
@@ -12,7 +9,7 @@ const EditBlog = (props) => {
     const [authorBlog, setAuthorBlog] = useState(props.blog.author);
     const [contextBlog, setContextBlog] = useState(props.blog.context);
 
-    // Update Request
+
     const updateDataBlog = async () => {
         // e.preventDefault();
 
@@ -33,7 +30,6 @@ const EditBlog = (props) => {
 
             console.log(responseData);
             toast.success(responseData.data, { autoClose: 15000 });
-            // props.updatePost(id, body)
 
             window.location = "/all"
 
@@ -41,21 +37,13 @@ const EditBlog = (props) => {
             console.log(error.message);
 
         }
-        // console.log('>>>>>>>>>', props)
+
 
 
 
 
     }
 
-    // const editpost = (id) => {
-    //     props.editOpen(id)
-    // }
-
-    // const deleteItem = () => {
-    //     const id = props.blog.id;
-    //     props.deletePost(id)
-    // }
 
     return (
         <div>

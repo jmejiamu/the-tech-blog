@@ -45,7 +45,6 @@ const Login = (props) => {
 
     return (
 
-        // 
         <div className="container-fluid">
             <div className="row no-gutter">
 

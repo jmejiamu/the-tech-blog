@@ -7,7 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import '../src/components/style/styles.scss'
 
-//- components
 import ShowAllBlogs from './components/ShowAllBlogs';
 import AddNewBlog from './components/AddNewbolg';
 import Home from './components/Home';

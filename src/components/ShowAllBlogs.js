@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
-// import './style/card.scss'
+
 
 import EditBlog from './EditBlog';
 import NavBar from './NavBar';
-// import { getData } from './../action/getData';
-// import { connect } from 'react-redux';
-// import { deletePost } from './../action/deleteData';
+
 
 const ShowAllBlogs = (props) => {
     const [blogData, setBlogData] = useState([]);
@@ -54,7 +52,6 @@ const ShowAllBlogs = (props) => {
     useEffect(() => {
         getAllPost();
         getUserName();
-        // getData();
     }, []);
 
 
