@@ -67,10 +67,7 @@ const EditBlog = (props) => {
                 data-target={`#id${props.blog.id}`}>
                 Edit</button>
 
-            {/* <button
-                type="button"
-                className="card-link btn btn btn-danger mx-3"
-                onClick={() => deleteItem()}>Delete</button> */}
+
 
             <div className="modal" id={`id${props.blog.id}`}>
                 <div className="modal-dialog">
@@ -111,7 +108,7 @@ const EditBlog = (props) => {
                                 className="button-style btn btn-link"
                                 data-dismiss="modal"
                                 onClick={() => updateDataBlog()}
-                            // onSubmit={updateDataBlog}
+
                             >Edit</button>
 
                             <button type="button" className="button-style btn btn-link" data-dismiss="modal">Close</button>
@@ -125,6 +122,5 @@ const EditBlog = (props) => {
     )
 }
 
-// const mapDispatchToProps = { deletePost, updatePost, editOpen }
 
 export default EditBlog;

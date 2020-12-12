@@ -5,15 +5,7 @@ import logo from '../assets/logo.svg'
 import logout from './loginLogout/logout';
 
 const NavBar = (props) => {
-    // console.log('this are props', props);
 
-    // const logout = (e) => {
-
-    //     e.preventDefault();
-    //     localStorage.removeItem('jwt');
-    //     props.setAuth(false);
-    //     toast.success("👋 Logged out Successfully!")
-    // }
     return (
         <div >
             <nav className=" navbar  navbar-expand-lg  justify-content-between navbar-dark bg-dark" >

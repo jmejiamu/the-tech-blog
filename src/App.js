@@ -11,7 +11,7 @@ import '../src/components/style/styles.scss'
 import ShowAllBlogs from './components/ShowAllBlogs';
 import AddNewBlog from './components/AddNewbolg';
 import Home from './components/Home';
-// import FooterBar from './components/FooterBar';
+
 
 import Login from './components/loginLogout/Login'
 import Register from './components/loginLogout/Register';

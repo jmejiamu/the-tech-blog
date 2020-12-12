@@ -84,11 +84,7 @@ const AddNewBlog = props => {
 
     return (
         <div>
-            {/* <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                    <h1 className="text-center py-5 cl" >Add New Blog</h1>
-                </div>
-            </div> */}
+
             <NavBar setAuth={props.setAuth} name={userName} />
             <div className="container" >
 
@@ -122,9 +118,9 @@ const AddNewBlog = props => {
                             onChange={e => setContextBlog(e.target.value)}
                         />
                     </div>
-                    {/* <div className="text-center"> */}
+
                     <button className="btn btn-success">Add Blog</button>
-                    {/* </div> */}
+
                 </form>
                 {alertValidation.show ? (
                     <div className="alert alert-danger">

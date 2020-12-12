@@ -60,11 +60,7 @@ const ShowAllBlogs = (props) => {
 
     return (
         <div className="body">
-            {/* <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                    <h1 className="text-center py-5 cl" >Blogs</h1>
-                </div>
-            </div> */}
+
             <NavBar setAuth={props.setAuth} name={userName} />
             <hr />
             {
@@ -95,19 +91,5 @@ const ShowAllBlogs = (props) => {
         </div>
     )
 }
-// const mapStateToProps = (state) => {
-//     return {
-//         show: state.showData
-//     }
-// }
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         getData: dispatch(getData()),
-//     }
-// }
-// const mapDispatchToProps = {
 
-//     deletePost
-
-// }
 export default ShowAllBlogs;
