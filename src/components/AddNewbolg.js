@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import NavBar from "./NavBar";
 // import { withRouter } from 'react-router-dom';
 
 const AddNewBlog = props => {
+    const [userName, setUserName] = useState("");
     const [titleblog, setTitleBlog] = useState("");
     const [authorBlog, setAuthorBlog] = useState("");
     const [contextBlog, setContextBlog] = useState("");
@@ -63,55 +65,75 @@ const AddNewBlog = props => {
             }
         }
     };
+    const getUserName = async () => {
+        try {
+            const response = await fetch('https://thetechblog.me/data', {
+                method: 'GET',
+                headers: { token: localStorage.jwt }
+            })
+            const data = await response.json()
+            setUserName(data.name)
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
+
+    useEffect(() => {
+        getUserName();
+    }, [])
 
     return (
-        <div className="container">
+        <div>
             {/* <div className="jumbotron jumbotron-fluid">
                 <div className="container">
                     <h1 className="text-center py-5 cl" >Add New Blog</h1>
                 </div>
             </div> */}
-            <form className="add-post-form mt-5 mb-5 bx-con" onSubmit={submitData}>
-                <div className="form-group">
-                    <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Title"
-                        value={titleblog}
-                        onChange={e => setTitleBlog(e.target.value)}
-                    />
-                </div>
+            <NavBar setAuth={props.setAuth} name={userName} />
+            <div className="container" >
 
-                <div className="form-group">
-                    <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Author"
-                        value={authorBlog}
-                        onChange={e => setAuthorBlog(e.target.value)}
-                    />
-                </div>
+                <form className="add-post-form mt-5 mb-5 bx-con" onSubmit={submitData}>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Title"
+                            value={titleblog}
+                            onChange={e => setTitleBlog(e.target.value)}
+                        />
+                    </div>
 
-                <div className="form-group">
-                    <textarea
-                        className="form-control"
-                        type="text"
-                        placeholder="Description"
-                        value={contextBlog}
-                        onChange={e => setContextBlog(e.target.value)}
-                    />
-                </div>
-                {/* <div className="text-center"> */}
-                <button className="btn btn-success">Add Blog</button>
-                {/* </div> */}
-            </form>
-            {alertValidation.show ? (
-                <div className="alert alert-danger">
-                    <strong>Try again!</strong> {alertValidation.message}
-                </div>
-            ) : (
-                    ""
-                )}
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Author"
+                            value={authorBlog}
+                            onChange={e => setAuthorBlog(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <textarea
+                            className="form-control"
+                            type="text"
+                            placeholder="Description"
+                            value={contextBlog}
+                            onChange={e => setContextBlog(e.target.value)}
+                        />
+                    </div>
+                    {/* <div className="text-center"> */}
+                    <button className="btn btn-success">Add Blog</button>
+                    {/* </div> */}
+                </form>
+                {alertValidation.show ? (
+                    <div className="alert alert-danger">
+                        <strong>Try again!</strong> {alertValidation.message}
+                    </div>
+                ) : (
+                        ""
+                    )}
+            </div>
         </div>
     );
 };

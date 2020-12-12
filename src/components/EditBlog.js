@@ -15,6 +15,7 @@ const EditBlog = (props) => {
     // Update Request
     const updateDataBlog = async () => {
         // e.preventDefault();
+
         try {
             // const id = props.blog.id;
             const body = {
@@ -29,12 +30,12 @@ const EditBlog = (props) => {
             })
 
             const responseData = await response.json();
+
             console.log(responseData);
             toast.success(responseData.data, { autoClose: 15000 });
             // props.updatePost(id, body)
 
             window.location = "/all"
-
 
         } catch (error) {
             console.log(error.message);

@@ -1,11 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { toast } from 'react-toastify';
 import logo from '../assets/logo.svg'
+import logout from './loginLogout/logout';
 
-const NavBar = () => {
+const NavBar = (props) => {
+    // console.log('this are props', props);
+
+    // const logout = (e) => {
+
+    //     e.preventDefault();
+    //     localStorage.removeItem('jwt');
+    //     props.setAuth(false);
+    //     toast.success("👋 Logged out Successfully!")
+    // }
     return (
         <div >
-            <nav className=" navbar sticky-top navbar-expand-lg  justify-content-between navbar-dark bg-dark" >
+            <nav className=" navbar  navbar-expand-lg  justify-content-between navbar-dark bg-dark" >
                 <a className=" logo-style navbar text-white " href="/">
                     <img src={logo} width="35" height="35" alt="logo" />
                     the-Tech-Blog
@@ -19,10 +30,13 @@ const NavBar = () => {
 
                 <div className="dropdown">
                     <button className="drop-down-style btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        User Name </button>
+                        {`Welcome ✌️ , ${props.name}`} </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a className="dropdown-item" href="#">Edit Perfil</a>
-                        <a className="dropdown-item" href="#">Sing Out</a>
+
+                        <a className="dropdown-item" href="#"
+                            onClick={e => logout(e, props)}
+                        >Sing Out</a>
                     </div>
                 </div>
             </nav>

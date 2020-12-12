@@ -3,12 +3,14 @@ import { toast } from 'react-toastify';
 // import './style/card.scss'
 
 import EditBlog from './EditBlog';
+import NavBar from './NavBar';
 // import { getData } from './../action/getData';
 // import { connect } from 'react-redux';
 // import { deletePost } from './../action/deleteData';
 
 const ShowAllBlogs = (props) => {
     const [blogData, setBlogData] = useState([]);
+    const [userName, setUserName] = useState("");
     // Delete
     const deletePost = async (id) => {
         try {
@@ -35,8 +37,23 @@ const ShowAllBlogs = (props) => {
 
         }
     }
+
+    const getUserName = async () => {
+        try {
+            const response = await fetch('https://thetechblog.me/data', {
+                method: 'GET',
+                headers: { token: localStorage.jwt }
+            })
+            const data = await response.json()
+            setUserName(data.name)
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
+
     useEffect(() => {
         getAllPost();
+        getUserName();
         // getData();
     }, []);
 
@@ -48,6 +65,7 @@ const ShowAllBlogs = (props) => {
                     <h1 className="text-center py-5 cl" >Blogs</h1>
                 </div>
             </div> */}
+            <NavBar setAuth={props.setAuth} name={userName} />
             <hr />
             {
                 blogData.length === 0 ? <h1 className="text-center mt-5 mb-5"> There is not post yet!{'😌'}</h1> : (blogData.map(blog => {
