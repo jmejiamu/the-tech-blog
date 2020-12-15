@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
+import restfulapi from '../URL/url';
+
 const Login = (props) => {
 
     const [email, setEmail] = useState('');
@@ -16,7 +18,7 @@ const Login = (props) => {
                 password: password
             }
 
-            const response = await fetch('https://thetechblog.me/signin', {
+            const response = await fetch(restfulapi.the_tech_blog + '/signin', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body)

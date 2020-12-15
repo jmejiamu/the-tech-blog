@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 
+import restfulapi from './URL/url';
+
 const AddNewBlog = props => {
+    const [userId, setUserId] = useState("")
+    const [userEmail, setUserEmail] = useState("")
+    const [picture, setPicture] = useState("")
     const [userName, setUserName] = useState("");
     const [titleblog, setTitleBlog] = useState("");
     const [authorBlog, setAuthorBlog] = useState("");
@@ -13,7 +18,7 @@ const AddNewBlog = props => {
     const submitData = async e => {
         e.preventDefault();
 
-        if (titleblog === "" && authorBlog === "" && contextBlog === "") {
+        if (titleblog === "" && contextBlog === "") {
             setAlertValidation({
                 show: true,
                 message:
@@ -21,33 +26,28 @@ const AddNewBlog = props => {
             });
         } else {
             if (titleblog !== "") {
-                if (authorBlog !== "") {
-                    if (contextBlog !== "") {
-                        // Send the data to the DB
-                        try {
-                            const body = {
-                                title: titleblog,
-                                author: authorBlog,
-                                context: contextBlog
-                            };
-                            const response = await fetch("https://thetechblog.me/newpost", {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify(body)
-                            });
-
-                        } catch (error) {
-                            console.error(error.message);
-                        }
-
-                        props.history.push("/all");
-                    } else {
-                        setAlertValidation({
-                            show: true,
-                            message:
-                                "The inputs are empty"
+                // if (authorBlog !== "") {
+                if (contextBlog !== "") {
+                    // Send the data to the DB
+                    try {
+                        const body = {
+                            title: titleblog,
+                            author: userName,
+                            context: contextBlog,
+                            email: userEmail,
+                            picture: picture
+                        };
+                        const response = await fetch(restfulapi.the_tech_blog + "/newpost", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify(body)
                         });
+
+                    } catch (error) {
+                        console.error(error.message);
                     }
+
+                    props.history.push("/all");
                 } else {
                     setAlertValidation({
                         show: true,
@@ -55,6 +55,13 @@ const AddNewBlog = props => {
                             "The inputs are empty"
                     });
                 }
+                // } else {
+                //     setAlertValidation({
+                //         show: true,
+                //         message:
+                //             "The inputs are empty"
+                //     });
+                // }
             } else {
                 setAlertValidation({
                     show: true,
@@ -66,12 +73,16 @@ const AddNewBlog = props => {
     };
     const getUserName = async () => {
         try {
-            const response = await fetch('https://thetechblog.me/data', {
+            const response = await fetch(restfulapi.the_tech_blog + '/data', {
                 method: 'GET',
                 headers: { token: localStorage.jwt }
             })
             const data = await response.json()
+            console.log(data);
             setUserName(data.name)
+            setUserEmail(data.email)
+            setPicture(data.picture)
+            setUserId(data.id)
         } catch (error) {
             console.error(error.message);
         }
@@ -84,7 +95,7 @@ const AddNewBlog = props => {
     return (
         <div>
 
-            <NavBar setAuth={props.setAuth} name={userName} />
+            <NavBar setAuth={props.setAuth} name={userName} id={userId} picture={picture} email={userEmail} />
             <div className="container" >
 
                 <form className="add-post-form mt-5 mb-5 bx-con" onSubmit={submitData}>
@@ -98,15 +109,6 @@ const AddNewBlog = props => {
                         />
                     </div>
 
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Author"
-                            value={authorBlog}
-                            onChange={e => setAuthorBlog(e.target.value)}
-                        />
-                    </div>
 
                     <div className="form-group">
                         <textarea

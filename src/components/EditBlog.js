@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import { toast } from 'react-toastify';
 
+import restfulapi from './URL/url'
+
 
 const EditBlog = (props) => {
 
@@ -20,7 +22,7 @@ const EditBlog = (props) => {
                 author: authorBlog,
                 context: contextBlog
             };
-            const response = await fetch(`https://thetechblog.me/updateblog/${props.blog.id}`, {
+            const response = await fetch(restfulapi.the_tech_blog + `/updateblog/${props.blog.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body)
@@ -75,12 +77,7 @@ const EditBlog = (props) => {
                                 className="form-control"
                                 value={titleblog}
                                 onChange={e => setTitleBlog(e.target.value)} />
-                            <label>Author</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                value={authorBlog}
-                                onChange={e => setAuthorBlog(e.target.value)} />
+
                             <label>Context</label>
                             <textarea
                                 type="text"

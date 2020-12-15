@@ -4,6 +4,8 @@ import './App.css';
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
+import restfulapi from './components/URL/url';
+
 
 import '../src/components/style/styles.scss'
 
@@ -14,6 +16,7 @@ import Home from './components/Home';
 
 import Login from './components/loginLogout/Login'
 import Register from './components/loginLogout/Register';
+import IndividualPost from './components/individualPost/IndividualPost';
 
 toast.configure();
 
@@ -29,7 +32,7 @@ function App() {
 
     const isAuth = async () => {
         try {
-            const response = await fetch('https://thetechblog.me/isverify', {
+            const response = await fetch(restfulapi.the_tech_blog + '/isverify', {
                 method: 'GET',
                 headers: { token: localStorage.jwt }
             })
@@ -55,6 +58,7 @@ function App() {
                     <Route exact path='/register' render={props => !isAuthenticated ? <Register {...props} setAuth={setAuth} /> : <Redirect to="/" />} />
                     <Route exact path='/all' render={props => isAuthenticated ? <ShowAllBlogs {...props} setAuth={setAuth} /> : <Redirect to="/" />} />
                     <Route exact path='/add' render={props => isAuthenticated ? <AddNewBlog {...props} setAuth={setAuth} /> : <Redirect to="/" />} />
+                    <Route exact path='/post' render={props => isAuthenticated ? <IndividualPost {...props} setAuth={setAuth} /> : <Redirect to="/" />} />
                 </Switch>
             </div>
         </BrowserRouter>

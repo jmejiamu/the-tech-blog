@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
+import restfulapi from '../URL/url';
+
 const Register = (props) => {
 
 
@@ -14,13 +16,15 @@ const Register = (props) => {
 
         try {
             // Object to be sent to the back end
+            let defaultPicture = 'http://via.placeholder.com/100x100';
             const body = {
                 name: name,
                 email: email,
-                password: password
+                password: password,
+                picture: defaultPicture
             }
 
-            const response = await fetch('https://thetechblog.me/register', {
+            const response = await fetch(restfulapi.the_tech_blog + '/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
