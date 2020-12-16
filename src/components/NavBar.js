@@ -4,6 +4,7 @@ import logo from '../assets/logo.svg'
 import logout from './loginLogout/logout';
 import restfulapi from './URL/url'
 import { useHistory } from 'react-router-dom';
+import EditTwoToneIcon from '@material-ui/icons/EditTwoTone';;
 
 
 const NavBar = (props) => {
@@ -86,24 +87,32 @@ const NavBar = (props) => {
 
                         <label htmlFor="upload-button" >
                             {pictureResource.preview ? (
-                                <img src={pictureResource.preview} className="image-style" alt="upload-pic-view" />) :
+                                <div className="profile-pic">
+                                    <img src={pictureResource.preview} className="profile" alt="upload-pic-view" />
+                                </div>
+                            ) :
                                 (
-                                    <img className="image-style" src={`${props.picture}`} alt="Carcap" />
+                                    <div className="profile-pic" >
+                                        <img className="profile" src={`${props.picture}`} alt="Carcap" />
+                                    </div>
                                 )
 
                             }
                         </label>
 
                         <div className="modal-body">
-
-                            <p> <strong>Name: </strong> {props.name}</p>
-                            <div>
+                            <div className="name-style" >
+                                <p> <strong>Name: </strong> {props.name}</p>
+                            </div>
+                            <div className="manage-post">
                                 <button
                                     type="submit"
                                     className="button-style btn btn-link"
                                     data-dismiss="modal"
                                     onClick={handleGoToPost}
-                                >Manage post</button>
+                                >Manage post
+                                 <EditTwoToneIcon className="icon" style={{ fontSize: 25 }} />
+                                </button>
 
                             </div>
 
