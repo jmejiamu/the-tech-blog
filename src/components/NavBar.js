@@ -4,7 +4,8 @@ import logo from '../assets/logo.svg'
 import logout from './loginLogout/logout';
 import restfulapi from './URL/url'
 import { useHistory } from 'react-router-dom';
-import EditTwoToneIcon from '@material-ui/icons/EditTwoTone';;
+import EditTwoToneIcon from '@material-ui/icons/EditTwoTone';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 
 const NavBar = (props) => {
@@ -118,7 +119,7 @@ const NavBar = (props) => {
 
                             <span className="btn btn-primary btn-file" >
 
-                                Browse...  <input className="my-3"
+                                Browse File <CloudUploadIcon className="icon-upload" />  <input className="my-3"
                                     type="file"
                                     // name="file"
                                     onChange={onFileChange}
