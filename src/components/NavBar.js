@@ -116,12 +116,14 @@ const NavBar = (props) => {
 
                             </div>
 
+                            <span className="btn btn-primary btn-file" >
 
-                            <input className="my-3"
-                                type="file"
-                                name="file"
-                                onChange={onFileChange}
-                            />
+                                Browse...  <input className="my-3"
+                                    type="file"
+                                    // name="file"
+                                    onChange={onFileChange}
+                                />
+                            </span>
 
                         </div>
 
