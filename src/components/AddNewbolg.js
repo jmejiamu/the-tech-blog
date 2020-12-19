@@ -78,7 +78,6 @@ const AddNewBlog = props => {
                 headers: { token: localStorage.jwt }
             })
             const data = await response.json()
-            console.log(data);
             setUserName(data.name)
             setUserEmail(data.email)
             setPicture(data.picture)
