@@ -119,7 +119,7 @@ const NavBar = (props) => {
 
                             <span className="btn btn-primary btn-file" >
 
-                                Browse File <CloudUploadIcon className="icon-upload" />  <input className="my-3"
+                                Change Picture <CloudUploadIcon className="icon-upload" />  <input className="my-3"
                                     type="file"
                                     // name="file"
                                     onChange={onFileChange}
