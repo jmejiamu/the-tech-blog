@@ -22,7 +22,7 @@ User can change profile picture; also, go to edit or delete post if there is any
 
 ### Show all blogs
 
-![screencapture-pedantic-mirzakhani-a289df-netlify-app-all-2020-08-30-23_29_58](https://user-images.githubusercontent.com/27458911/91689384-dc8a1200-eb18-11ea-91ab-73c915b57d00.png)
+<img width="947" alt="showallpost" src="https://user-images.githubusercontent.com/27458911/103493652-73c4e600-4de7-11eb-9e67-b669a95e5bb1.png">
 
 ### No blogs
 
