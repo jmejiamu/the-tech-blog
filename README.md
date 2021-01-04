@@ -3,7 +3,7 @@ NOTE: Front-end Underconstruction
 
 ## The Tech Blog
 
-Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal was to practice technologies such as  React,Bootstrap, NodeJs, Express, Postgresql. Also, practice how to setup SSL certificate. 
+Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal was to practice technologies such as  React,Bootstrap, NodeJs, Express, Postgresql. 
 
 ### Log in Form
 ![screencapture-the-tech-blog-netlify-app-2021-01-03-16_21_33](https://user-images.githubusercontent.com/27458911/103492559-a6b7ab80-4de0-11eb-838d-cbe2bae1cc30.png)
