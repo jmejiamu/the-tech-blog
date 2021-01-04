@@ -46,3 +46,7 @@ Feel free to add, delete or update a post
 ✔️ Add authentication
   * Sign In/ Sign Up
 
+Created by Jose H Mejia Munoz.
+Now an open source project.
+
+Welcome to any developer who want to improve the project.
