@@ -19,7 +19,6 @@ const NavBar = (props) => {
     }
 
     const [pictureResource, setPictureResource] = useState({ preview: "", raw: "" });
-    const [userName, setName] = useState('')
     const updateProfileData = () => {
 
         try {
@@ -73,6 +72,8 @@ const NavBar = (props) => {
                         <a className="dropdown-item" href="#home"
                             onClick={e => logout(e, props)}
                         >Sing Out</a>
+
+                        <Link className="dropdown-item" to="/about" >About</Link>
                     </div>
                 </div>
             </nav>
@@ -104,6 +105,7 @@ const NavBar = (props) => {
                         <div className="modal-body">
                             <div className="name-style" >
                                 <p> <strong>Name: </strong> {props.name}</p>
+
                             </div>
                             <div className="manage-post">
                                 <button
