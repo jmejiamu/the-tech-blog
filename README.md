@@ -15,6 +15,10 @@ Full stack application that allows users to add, delete, and update post. This i
 User can change profile picture; also, go to edit or delete post if there is any by click on manage post
 <img width="957" alt="Edit profile" src="https://user-images.githubusercontent.com/27458911/103493458-52172f00-4de6-11eb-89de-f960a1902caf.png">
 
+### Manage Post 
+Users can edit or delete their post if they which so. 
+![screencapture-the-tech-blog-netlify-app-post-2021-01-03-17_25_50](https://user-images.githubusercontent.com/27458911/103493958-3cefcf80-4de9-11eb-9420-a7fc0ccee5bc.png)
+
 ### Add Blogs
 ![screencapture-the-tech-blog-netlify-app-add-2021-01-03-17_19_25](https://user-images.githubusercontent.com/27458911/103493758-006fa400-4de8-11eb-927b-28f9224458e7.png)
 
