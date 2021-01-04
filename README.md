@@ -8,6 +8,8 @@ Full stack application that allows users to add, delete, and update post. This i
 ### Log in Form
 ![screencapture-the-tech-blog-netlify-app-2021-01-03-16_21_33](https://user-images.githubusercontent.com/27458911/103492559-a6b7ab80-4de0-11eb-838d-cbe2bae1cc30.png)
 
+### Register Form
+![screencapture-the-tech-blog-netlify-app-register-2021-01-03-16_33_11](https://user-images.githubusercontent.com/27458911/103492703-8fc58900-4de1-11eb-8227-89db5eabdcb2.png)
 
 ### Add Blogs
 
