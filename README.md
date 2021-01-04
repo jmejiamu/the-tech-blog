@@ -16,8 +16,7 @@ User can change profile picture; also, go to edit or delete post if there is any
 <img width="957" alt="Edit profile" src="https://user-images.githubusercontent.com/27458911/103493458-52172f00-4de6-11eb-89de-f960a1902caf.png">
 
 ### Add Blogs
-
-![screencapture-pedantic-mirzakhani-a289df-netlify-app-add-2020-08-30-23_07_40](https://user-images.githubusercontent.com/27458911/91688039-ed855400-eb15-11ea-9906-ab6784fb1969.png)
+![screencapture-the-tech-blog-netlify-app-add-2021-01-03-17_19_25](https://user-images.githubusercontent.com/27458911/103493758-006fa400-4de8-11eb-927b-28f9224458e7.png)
 
 
 ### Show all blogs
