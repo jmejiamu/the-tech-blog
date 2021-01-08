@@ -5,6 +5,7 @@ import restfulapi from './URL/url'
 
 
 import NavBar from './NavBar';
+import Comments from './comments/Comments';
 
 
 const ShowAllBlogs = (props) => {
@@ -80,7 +81,9 @@ const ShowAllBlogs = (props) => {
                                 <h5 className="card-title">{blog.title}</h5>
                                 <h6 className="card-subtitle mb-2 text-muted">@{blog.author}</h6>
                                 <p className="card-text">{blog.context}</p>
-
+                                <div className=" card-link btn-group">
+                                    <Comments blog={blog} key={blog.id} />
+                                </div>
                             </div>
                         </div>
                     )
