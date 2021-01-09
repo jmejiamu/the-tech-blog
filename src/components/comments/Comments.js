@@ -124,7 +124,7 @@ const Comments = (props) => {
                         <div className="modal-footer">
                             <textarea
                                 type="text"
-                                className="form-control"
+                                className="form-control input-comment"
                                 placeholder="Add comment"
                                 value={comments}
                                 onChange={e => setAddComment(e.target.value)}></textarea>
