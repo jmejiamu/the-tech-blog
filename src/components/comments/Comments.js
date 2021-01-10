@@ -19,8 +19,8 @@ const Comments = (props) => {
     const [userName, setUserName] = useState("");
 
 
-    const addComment = async () => {
-        // e.preventDefault();
+    const addComment = async (e) => {
+        e.preventDefault();
 
         try {
             // const id = props.blog.id;
@@ -41,7 +41,9 @@ const Comments = (props) => {
             console.log(responseData);
             toast.success(responseData.data, { autoClose: 15000 });
 
-            window.location = "/all"
+            // window.location = "/all"
+            getAllComments();
+            setAddComment('');
 
         } catch (error) {
             console.log(error.message);
@@ -131,8 +133,8 @@ const Comments = (props) => {
                             <button
                                 type="submit"
                                 className="button-style btn btn-link"
-                                data-dismiss="modal"
-                                onClick={() => addComment()}
+                                // data-dismiss="modal"
+                                onClick={addComment}
 
                             >Add</button>
 
