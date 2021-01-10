@@ -7,7 +7,6 @@ import restfulapi from '../URL/url'
 
 const Comments = (props) => {
 
-    console.log(props);
 
     // const [titleblog, setTitleBlog] = useState(props.blog.title);
     // const [authorBlog, setAuthorBlog] = useState(props.blog.author);
@@ -38,7 +37,7 @@ const Comments = (props) => {
 
             const responseData = await response.json();
 
-            console.log(responseData);
+
             toast.success(responseData.data, { autoClose: 15000 });
 
             // window.location = "/all"
@@ -112,7 +111,7 @@ const Comments = (props) => {
                                 allComments.map(comment => {
                                     if (props.blog.id === comment.newblog_id) {
                                         return (
-                                            <div>
+                                            <div key={comment.id} >
                                                 <p className="username">{comment.username}</p>
                                                 <p>{comment.comments}</p>
                                             </div>

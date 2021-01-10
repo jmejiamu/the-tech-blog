@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import { toast } from 'react-toastify';
 
 import restfulapi from './URL/url'
 
 
+
 const EditBlog = (props) => {
+
+
 
     const [titleblog, setTitleBlog] = useState(props.blog.title);
     const [authorBlog, setAuthorBlog] = useState(props.blog.author);
     const [contextBlog, setContextBlog] = useState(props.blog.context);
 
 
-    const updateDataBlog = async () => {
-        // e.preventDefault();
+    const updateDataBlog = async (e) => {
+        e.preventDefault();
 
         try {
             // const id = props.blog.id;
@@ -33,7 +37,8 @@ const EditBlog = (props) => {
             console.log(responseData);
             toast.success(responseData.data, { autoClose: 15000 });
 
-            window.location = "/all"
+            // window.location = "/all"
+            props.history.push('all');
 
         } catch (error) {
             console.log(error.message);
@@ -89,7 +94,7 @@ const EditBlog = (props) => {
                                 type="submit"
                                 className="button-style btn btn-link"
                                 data-dismiss="modal"
-                                onClick={() => updateDataBlog()}
+                                onClick={updateDataBlog}
 
                             >Edit</button>
 
@@ -105,4 +110,4 @@ const EditBlog = (props) => {
 }
 
 
-export default EditBlog;
+export default withRouter(EditBlog);
