@@ -7,6 +7,9 @@ import restfulapi from './URL/url'
 import NavBar from './NavBar';
 import Comments from './comments/Comments';
 
+import ReadMoreReact from 'read-more-react';
+
+
 
 const ShowAllBlogs = (props) => {
     const [blogData, setBlogData] = useState([]);
@@ -80,7 +83,15 @@ const ShowAllBlogs = (props) => {
                             <div className="card-body">
                                 <h5 className="card-title">{blog.title}</h5>
                                 <h6 className="card-subtitle mb-2 text-muted">@{blog.author}</h6>
-                                <p className="card-text">{blog.context}</p>
+
+                                <ReadMoreReact className="card-text"
+                                    text={blog.context}
+                                    max={500}
+                                    ideal={450}
+                                    min={400}
+                                    readMoreText="Read More ..."
+                                />
+
                                 <div className=" card-link btn-group">
                                     <Comments blog={blog} key={blog.id} />
                                 </div>

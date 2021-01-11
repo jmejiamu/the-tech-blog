@@ -6,6 +6,8 @@ import restfulapi from '../URL/url';
 
 import EditBlog from '../EditBlog';
 
+import ReadMoreReact from 'read-more-react';
+
 const IndividualPost = (props) => {
 
     const [post, setPost] = useState([]);
@@ -63,6 +65,7 @@ const IndividualPost = (props) => {
         <div>
             <NavBar setAuth={props.setAuth} name={userName} id={userId} picture={userPicture} email={userEmail} />
 
+
             { post.length === 0 ? <h1 className="text-center mt-5 mb-5" >There is not post</h1> : (post.map(postData => {
                 if (userEmail === postData.email) {
 
@@ -74,7 +77,16 @@ const IndividualPost = (props) => {
                             <div className="card-body">
                                 <h5 className="card-title">{postData.title}</h5>
                                 <h6 className="card-subtitle mb-2 text-muted">@{postData.author}</h6>
-                                <p className="card-text">{postData.context}</p>
+
+                                <ReadMoreReact className="card-text"
+                                    text={postData.context}
+                                    max={500}
+                                    ideal={450}
+                                    min={400}
+                                    readMoreText="Read More..."
+                                />
+
+
                                 <div className=" card-link btn-group">
                                     <EditBlog blog={postData} key={postData.id} />
                                 </div>
