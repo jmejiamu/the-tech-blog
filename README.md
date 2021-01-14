@@ -49,6 +49,5 @@ Feel free to add, delete or update a post
 Created by Jose H Mejia Munoz.
 Now an open source project.
 
-Welcome to any developer who want to improve the project.
 ### Licensing
 This project is under the MIT license. 
