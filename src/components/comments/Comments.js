@@ -84,6 +84,17 @@ const Comments = (props) => {
         getUserName();
     }, [])
 
+    const commentCount = () => {
+        let count = 0;
+        allComments.map(comment => {
+            if (props.blog.id === comment.newblog_id) {
+                return (
+                    count++
+                )
+            }
+        })
+        return count;
+    }
 
     return (
         <div>
@@ -93,7 +104,7 @@ const Comments = (props) => {
                 className="button-style btn btn-link "
                 data-toggle="modal"
                 data-target={`#id${props.blog.id}`}>
-                comment</button>
+                comment {commentCount()}</button>
 
 
 
