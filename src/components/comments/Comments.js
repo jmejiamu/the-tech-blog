@@ -7,9 +7,6 @@ import restfulapi from '../URL/url'
 
 const Comments = (props) => {
 
-
-    // const [titleblog, setTitleBlog] = useState(props.blog.title);
-    // const [authorBlog, setAuthorBlog] = useState(props.blog.author);
     const [comments, setAddComment] = useState('');
     const [allComments, setAllComments] = useState([]);
     const [userId, setUserId] = useState("")
