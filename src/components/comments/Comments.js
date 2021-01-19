@@ -40,7 +40,6 @@ const Comments = (props) => {
 
             toast.success(responseData.data, { autoClose: 15000 });
 
-            // window.location = "/all"
             getAllComments();
             setAddComment('');
 
