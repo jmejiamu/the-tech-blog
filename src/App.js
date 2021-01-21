@@ -18,6 +18,7 @@ import Login from './components/loginLogout/Login'
 import Register from './components/loginLogout/Register';
 import IndividualPost from './components/individualPost/IndividualPost';
 import About from './components/about/About';
+import Store from './components/store/Store';
 
 toast.configure();
 
@@ -61,6 +62,7 @@ function App() {
                     <Route exact path='/add' render={props => isAuthenticated ? <AddNewBlog {...props} setAuth={setAuth} /> : <Redirect to="/" />} />
                     <Route exact path='/post' render={props => isAuthenticated ? <IndividualPost {...props} setAuth={setAuth} /> : <Redirect to="/" />} />
                     <Route exact path='/about' render={props => isAuthenticated ? <About {...props} setAuth={setAuth} /> : <Redirect to="/" />} />
+                    <Route exact path='/store' render={props => isAuthenticated ? <Store {...props} setAuth={setAuth} /> : <Redirect to="/" />} />
                 </Switch>
             </div>
         </BrowserRouter>

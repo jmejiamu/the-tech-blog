@@ -58,6 +58,7 @@ const NavBar = (props) => {
                     <li className="nav-item"><Link className="nav-link " to="/">Home</Link></li>
                     <li className="nav-item"><Link className="nav-link" to="/all">Blogs</Link></li>
                     <li className="nav-item"><Link className="nav-link" to="/add">Add Blog</Link></li>
+                    <li className="nav-item"><Link className="nav-link" to="/store">Store</Link></li>
                 </ul>
 
                 <div className="dropdown">

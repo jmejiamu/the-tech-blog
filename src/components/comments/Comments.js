@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { toast } from 'react-toastify';
 
-import restfulapi from '../URL/url'
+import restfulapi from '../URL/url';
 
 
 const Comments = (props) => {
@@ -92,8 +92,10 @@ const Comments = (props) => {
         return count;
     }
 
+
     return (
         <div>
+
 
             <button
                 type="button"
@@ -101,8 +103,6 @@ const Comments = (props) => {
                 data-toggle="modal"
                 data-target={`#id${props.blog.id}`}>
                 comment {commentCount()}</button>
-
-
 
             <div className="modal" id={`id${props.blog.id}`}>
                 <div className="modal-dialog">
@@ -123,6 +123,7 @@ const Comments = (props) => {
                                                 <p>{comment.comments}</p>
                                             </div>
                                         )
+
                                     }
                                 })
                             }
