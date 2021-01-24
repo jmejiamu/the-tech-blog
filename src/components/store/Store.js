@@ -36,7 +36,7 @@ const Store = () => {
                             <p>$ {cost}</p>
                         </div>
                     </div>
-                    <div className="card card-style mt-5 grid-item" >
+                    <div className="card card-style mt-5 grid-item mb-5" >
                         <img className="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="bookimage" />
                         <div className="card-body">
                             <h5 className="card-title">Book Title</h5>
@@ -45,7 +45,7 @@ const Store = () => {
                             <p>$ {cost}</p>
                         </div>
                     </div>
-                    <div className="card card-style mt-5 grid-item" >
+                    <div className="card card-style mt-5 grid-item mb-5" >
                         <img className="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="bookimage" />
                         <div className="card-body">
                             <h5 className="card-title">Book Title</h5>
@@ -54,7 +54,7 @@ const Store = () => {
                             <p>$ {cost}</p>
                         </div>
                     </div>
-                    <div className="card card-style mt-5 grid-item" >
+                    <div className="card card-style mt-5 grid-item mb-5" >
                         <img className="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="Card image cap" />
                         <div className="card-body">
                             <h5 className="card-title">Book Title</h5>
