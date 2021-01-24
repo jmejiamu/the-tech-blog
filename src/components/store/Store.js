@@ -14,7 +14,7 @@ const Store = () => {
                         <div className="card-body">
                             <h5 className="card-title">Book Title</h5>
                             <p className="card-text">Boook title description</p>
-                            <a href="#" className="btn btn-primary">Add Item</a>
+                            <button type="button" className="button-style btn btn-link">Add Item</button>
                             <p>$ {cost}</p>
                         </div>
                     </div>
@@ -23,7 +23,7 @@ const Store = () => {
                         <div className="card-body">
                             <h5 className="card-title">Book Title</h5>
                             <p className="card-text">Boook title description</p>
-                            <a href="#" className="btn btn-primary">Add Item</a>
+                            <button type="button" className="button-style btn btn-link">Add Item</button>
                             <p>$ {cost}</p>
                         </div>
                     </div>
@@ -32,7 +32,7 @@ const Store = () => {
                         <div className="card-body">
                             <h5 className="card-title">Book Title</h5>
                             <p className="card-text">Boook title description</p>
-                            <a href="#" className="btn btn-primary grid-item">Add Item</a>
+                            <button type="button" className="button-style btn btn-link">Add Item</button>
                             <p>$ {cost}</p>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ const Store = () => {
                         <div className="card-body">
                             <h5 className="card-title">Book Title</h5>
                             <p className="card-text">Boook title description</p>
-                            <a href="#" className="btn btn-primary">Add Item</a>
+                            <button type="button" className="button-style btn btn-link">Add Item</button>
                             <p>$ {cost}</p>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ const Store = () => {
                         <div className="card-body">
                             <h5 className="card-title">Book Title</h5>
                             <p className="card-text">Boook title description</p>
-                            <a href="#" className="btn btn-primary">Add Item</a>
+                            <button type="button" className="button-style btn btn-link">Add Item</button>
                             <p>$ {cost}</p>
                         </div>
                     </div>
@@ -59,7 +59,7 @@ const Store = () => {
                         <div className="card-body">
                             <h5 className="card-title">Book Title</h5>
                             <p className="card-text">Boook title description</p>
-                            <a href="#" className="btn btn-primary">Add Item</a>
+                            <button type="button" className="button-style btn btn-link">Add Item</button>
                             <p>$ {cost}</p>
                         </div>
                     </div>
