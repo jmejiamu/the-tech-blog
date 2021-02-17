@@ -43,6 +43,9 @@ Feel free to add, delete or update a post
 
 ❌ Pagination
 
+❌ Store to sell books(stripe)
+
+
 ✔️ Add authentication
   * Sign In/ Sign Up
 
