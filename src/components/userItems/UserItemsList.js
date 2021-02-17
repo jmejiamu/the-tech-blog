@@ -73,7 +73,7 @@ const UserItemsList = (props) => {
         <>
             <NavBar setAuth={props.setAuth} name={userName} id={userId} picture={userPicture} email={userEmail} />
 
-            <div class="px-4 px-lg-0">
+            <div class="px-4 px-lg-0 mt-5">
 
 
                 <div class="pb-5">
