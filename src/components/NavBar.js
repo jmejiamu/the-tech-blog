@@ -9,7 +9,7 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 
 const NavBar = (props) => {
-    // console.log('This are props', props);
+    // console.log('This are prop/s', props);
     // props  - name and id
     const history = useHistory();
 
@@ -63,7 +63,7 @@ const NavBar = (props) => {
 
                 <div className="dropdown">
                     <button className="drop-down-style btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {`Welcome ✌️ , ${props.name}`} </button>
+                        {`Welcome `}<img src={props.picture} width="40" height="40" class="rounded-circle"></img> </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a className="dropdown-item" href="#home"
                             data-toggle="modal"

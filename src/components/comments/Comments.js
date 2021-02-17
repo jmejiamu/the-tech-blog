@@ -103,7 +103,6 @@ const Comments = (props) => {
                 data-toggle="modal"
                 data-target={`#id${props.blog.id}`}>
                 comment {commentCount()}</button>
-
             <div className="modal" id={`id${props.blog.id}`}>
                 <div className="modal-dialog">
                     <div className="modal-content">
