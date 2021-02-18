@@ -43,7 +43,7 @@ Feel free to add, delete or update a post
 
 ❌ Pagination
 
-❌ Store to sell books(stripe)
+✔️ Store to sell books(stripe payment)
 
 
 ✔️ Add authentication
