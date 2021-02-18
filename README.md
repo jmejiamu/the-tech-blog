@@ -14,7 +14,7 @@ Full stack application that allows users to add, delete, and update post. This i
 ### Payment with stripe
 ![screencapture-localhost-3000-items-2021-02-17-20_11_50](https://user-images.githubusercontent.com/27458911/108304980-f8807f00-715d-11eb-8791-d961600770c2.png)
 
-### Payment succeded
+### Payment succeeded
 ![screencapture-dashboard-stripe-test-payments-2021-02-17-20_25_49](https://user-images.githubusercontent.com/27458911/108305265-780e4e00-715e-11eb-8330-bc22d6e48db6.png)
 
 
