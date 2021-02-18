@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import NavBar from '../NavBar';
 import restfulapi from '../URL/url';
+import StripeCheckout from 'react-stripe-checkout';
 
 const UserItemsList = (props) => {
     const [userName, setUserName] = useState("");
@@ -69,6 +70,43 @@ const UserItemsList = (props) => {
         return sum;
     }
 
+    const publishableKey = 'pk_test_51I562tEnics9zvhq3Bf4kb6aui3obz4vgetR4e8S02UlDH7qTAP4gaqFicUNioXVH24QKBbWKJ18qNBelNLACtoa00IGsDQZFS'
+    const priceForStripe = getPriceBook() * 100;
+
+    const onToken = async (token) => {
+
+        const body = {
+            token: token,
+            amount: priceForStripe
+        }
+        try {
+            const response = await fetch(restfulapi.the_tech_blog + '/payment', {
+                method: 'POST',
+                headers: { "Content-type": "application/json" },
+                body: JSON.stringify(body)
+            })
+
+        } catch (error) {
+            console.error(error);
+        }
+        // ({
+        //     url: 'http://localhost:5000/payment',
+        //     method: 'POST',
+        //     data: {
+        //         amount: priceForStripe,
+        //         token
+        //     }
+        // })
+        //     .then(response => {
+        //         alert('Payment successful')
+        //     }).catch(error => {
+        //         console.log('Payment error', JSON.parse(error))
+        //         alert(
+        //             'There was an issur with your payment. Please sure you use the provide credit card'
+        //         )
+        //     })
+    }
+
     return (
         <>
             <NavBar setAuth={props.setAuth} name={userName} id={userId} picture={userPicture} email={userEmail} />
@@ -125,7 +163,21 @@ const UserItemsList = (props) => {
                                             }
                                             <tr>
                                                 <td class="border-0 align-middle"><strong>Total: $ {getPriceBook()}</strong></td>
-                                                <td class="border-0 align-middle"><strong>Check out</strong></td>
+                                                <td class="border-0 align-middle">
+
+                                                    <StripeCheckout
+                                                        label='Pay Now'
+                                                        name='The Tech Blog '
+                                                        billingAddress
+                                                        shippingAddress
+                                                        image='https://svgshare.com/i/CUz.svg'
+                                                        description={`Your total is $${getPriceBook()}`}
+                                                        amount={priceForStripe}
+                                                        panelLabel='Pay Now'
+                                                        token={onToken}
+                                                        stripeKey={publishableKey}
+                                                    />
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
