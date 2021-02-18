@@ -11,6 +11,9 @@ Full stack application that allows users to add, delete, and update post. This i
 ### Checkout 
 ![screencapture-localhost-3000-items-2021-02-17-20_12_25](https://user-images.githubusercontent.com/27458911/108304846-b9eac480-715d-11eb-9bb0-980235f73a51.png)
 
+### Payment with stripe
+![screencapture-localhost-3000-items-2021-02-17-20_11_50](https://user-images.githubusercontent.com/27458911/108304980-f8807f00-715d-11eb-8791-d961600770c2.png)
+
 
 ### Log in Form
 ![screencapture-the-tech-blog-netlify-app-2021-01-03-16_21_33](https://user-images.githubusercontent.com/27458911/103492559-a6b7ab80-4de0-11eb-838d-cbe2bae1cc30.png)
