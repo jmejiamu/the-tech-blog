@@ -5,6 +5,19 @@ NOTE: Front-end Underconstruction
 
 Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal was to practice technologies such as  React,Bootstrap, NodeJs, Express, Postgresql. 
 
+### Book Store
+![screencapture-localhost-3000-store-2021-02-17-20_11_20](https://user-images.githubusercontent.com/27458911/108304702-6d9f8480-715d-11eb-9792-56af869b1c1c.png)
+
+### Checkout 
+![screencapture-localhost-3000-items-2021-02-17-20_12_25](https://user-images.githubusercontent.com/27458911/108304846-b9eac480-715d-11eb-9bb0-980235f73a51.png)
+
+### Payment with stripe
+![screencapture-localhost-3000-items-2021-02-17-20_11_50](https://user-images.githubusercontent.com/27458911/108304980-f8807f00-715d-11eb-8791-d961600770c2.png)
+
+### Payment succeeded
+![screencapture-dashboard-stripe-test-payments-2021-02-17-20_25_49](https://user-images.githubusercontent.com/27458911/108305265-780e4e00-715e-11eb-8330-bc22d6e48db6.png)
+
+
 ### Log in Form
 ![screencapture-the-tech-blog-netlify-app-2021-01-03-16_21_33](https://user-images.githubusercontent.com/27458911/103492559-a6b7ab80-4de0-11eb-838d-cbe2bae1cc30.png)
 
@@ -43,7 +56,7 @@ Feel free to add, delete or update a post
 
 ❌ Pagination
 
-❌ Store to sell books(stripe)
+✔️ Store to sell books(stripe payment)
 
 
 ✔️ Add authentication
