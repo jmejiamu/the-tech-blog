@@ -135,7 +135,7 @@ const Comments = (props) => {
                                 className="form-control input-comment"
                                 placeholder="Add comment"
                                 value={comments}
-                                onChange={e => setAddComment(e.target.value)}></textarea>
+                                onChange={e => setAddComment(e.target.value)} required></textarea>
                             <button
                                 type="submit"
                                 className="button-style btn btn-link"
