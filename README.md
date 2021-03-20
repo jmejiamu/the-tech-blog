@@ -56,6 +56,8 @@ Feel free to add, delete or update a post
 
 ❌ Pagination
 
+❌ E-mail verification
+
 ✔️ Store to sell books(stripe payment)
 
 
