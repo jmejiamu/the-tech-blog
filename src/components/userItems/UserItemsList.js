@@ -89,22 +89,7 @@ const UserItemsList = (props) => {
         } catch (error) {
             console.error(error);
         }
-        // ({
-        //     url: 'http://localhost:5000/payment',
-        //     method: 'POST',
-        //     data: {
-        //         amount: priceForStripe,
-        //         token
-        //     }
-        // })
-        //     .then(response => {
-        //         alert('Payment successful')
-        //     }).catch(error => {
-        //         console.log('Payment error', JSON.parse(error))
-        //         alert(
-        //             'There was an issur with your payment. Please sure you use the provide credit card'
-        //         )
-        //     })
+
     }
 
     return (
