@@ -53,7 +53,6 @@ const Store = (props) => {
         getBooks();
         getUserData();
         userBooks();
-        // sessionStorage.setItem(save.id, JSON.stringify(save))
 
     }, []);
 
