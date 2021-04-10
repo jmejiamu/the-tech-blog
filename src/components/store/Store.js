@@ -106,7 +106,7 @@ const Store = (props) => {
         <>
             <NavBar setAuth={props.setAuth} name={userName} id={userId} picture={userPicture} email={userEmail} />
             <div className="container">
-                <button type="button" onClick={() => goToItems()} className="button-style btn btn-link">Cart</button><span>{countUseritems()}</span>
+                <button type="button" onClick={() => goToItems()} className="button-style btn btn-link">Check out</button><span>{countUseritems()}</span>
                 <div className="grid-container">
                     {
                         book.map((bookItems) => {
