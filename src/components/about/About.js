@@ -43,6 +43,7 @@ const About = (props) => {
                 He enjoy coding and learning new technologies; therefore, he built the Tech Blog as a personal project,
                 but now, he wanted it to be open source.
                     </p>
+                <p>Contact me if like to contribute: jmejiamu@gmail.com</p>
 
                 <h2>Contributors</h2>
                 <h6>Jose H Mejia Munoz</h6>
