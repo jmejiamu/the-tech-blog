@@ -163,6 +163,14 @@ const UserItemsList = (props) => {
                                                         stripeKey={publishableKey}
                                                     />
                                                 </td>
+                                                <td>
+                                                    *Test data*
+                                                    Use the Email for test
+                                                    Any name, street, city and zip code.
+                                                    Card: 4242 4242 4242 4242
+                                                    Exp. Data:  12/22
+
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
