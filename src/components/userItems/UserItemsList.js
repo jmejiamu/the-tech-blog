@@ -166,7 +166,7 @@ const UserItemsList = (props) => {
                                                 <td>
 
                                                     <strong>*Test data*</strong>
-                                                    <p>Use the Email for test</p>
+                                                    <p><strong>Email:</strong>test@gmail.com</p>
                                                     <p>Any name, street, city and zip code.</p>
                                                     <p><strong>Card:</strong> 4242 4242 4242 4242</p>
                                                     <p><strong>Exp. Data:</strong>  12/22</p>
