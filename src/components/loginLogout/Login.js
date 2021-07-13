@@ -63,8 +63,8 @@ const Login = (props) => {
                                     <h3 className="display-4">Log in</h3>
                                     <p className="text-muted mb-4">Welcome to the the-tech-blog.</p>
                                     <p><strong>Test Credential</strong></p>
-                                    <p>Email: test@gmail.com</p>
-                                    <p>Password: test</p>
+                                    <p><strong>Email:</strong> test@gmail.com</p>
+                                    <p><strong>Password:</strong> test</p>
                                     <form onSubmit={submitUserData} >
                                         <div className="form-group mb-3">
                                             <input
