@@ -3,7 +3,7 @@ NOTE: Front-end Underconstruction
 
 ## The Tech Blog
 
-Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal was to practice technologies such as  React,Bootstrap, NodeJs, Express, Postgresql. 
+Full stack application that allows users to add, delete, and update post. This is a personal project which the main goal was to practice technologies such as  React,Bootstrap, NodeJs, Express, PostgreSQL. 
 
 ### Book Store
 ![screencapture-localhost-3000-store-2021-02-17-20_11_20](https://user-images.githubusercontent.com/27458911/108304702-6d9f8480-715d-11eb-9792-56af869b1c1c.png)
